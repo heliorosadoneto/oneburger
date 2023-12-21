@@ -14,6 +14,8 @@ class ContasPagarController extends Controller
         session_start();
         if (!isset($_SESSION['id'])) {
             $this->redirect('/login');
+        }elseif (isset($_SESSION['cargo']) && $_SESSION['cargo'] !== 'gerente') {
+            $this->render('home');
         }
         $dados = Conta::select()
             ->get();

@@ -16,7 +16,7 @@
             </div>
             <input placeholder="E-mail" type="email" name="email">
             <input placeholder="Senha" type="password" name="senha">
-            <input type="submit" value="Singnin">
+            <input type="submit" value="Entrar">
         </form>
     </div>
 </body>

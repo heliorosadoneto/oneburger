@@ -3,6 +3,7 @@
 namespace src\controllers;
 
 use \core\Controller;
+use src\models\User;
 use src\models\Venda;
 
 
@@ -17,6 +18,8 @@ class VendaController extends Controller
         session_start();
         if (!isset($_SESSION['id'])) {
             $this->redirect('/login');
+        } elseif (isset($_SESSION['cargo']) && $_SESSION['cargo'] !== 'gerente') {
+            $this->render('home');
         }
         $this->render('vendas');
     }
@@ -29,7 +32,7 @@ class VendaController extends Controller
         $store = Venda::select()
 
             ->where(function ($query) use ($tipo, $dataInicio, $dataFinal) {
-                
+
                 if ($tipo !== "") {
                     $query->where('tipo', '=', $tipo);
                 }

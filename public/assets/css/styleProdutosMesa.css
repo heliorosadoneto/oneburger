@@ -1,0 +1,336 @@
+body {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #eca96f;
+
+}
+
+.grid {
+  display: grid;
+}
+
+.containerHome {
+  grid-template-areas:
+    "links produtos compras"
+    "links produtos compras"
+    "links produtos compras"
+  ;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 40px calc(100vh);
+}
+
+.dropdown {
+  background-color: black;
+  grid-area: links;
+  overflow: auto;
+}
+
+
+.containerLink a button {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* codigo relacionado ao botão de mesas */
+
+.botaoMesaVermelho {
+  border: 1.2px solid black;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: red;
+  /* Defina a cor vermelha como desejar */
+  /* Adicione outros estilos desejados para o botão vermelho */
+}
+
+.botaoMesaNormal {
+  border: 1.2px solid black;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: #EFEFEF;
+  /* Defina a cor azul como desejar */
+  /* Adicione outros estilos desejados para o botão normal */
+}
+
+
+
+/*//////////////////////////////////////////////*/
+
+
+/*.containerTitulo {
+  background-color: black;
+  grid-area: Titulo;
+
+}*/
+
+.containerProdutos {
+  height: 80vh;
+  grid-area: produtos;
+}
+
+.containerCompras {
+
+  grid-area: compras;
+
+}
+
+.containerListaCompra {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7.6fr 1fr;
+  justify-items: center;
+}
+
+.containerPagamento {
+  height: 50px;
+  text-align: center;
+}
+
+.botaoPagamento {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #F17105;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  ;
+}
+
+.botaoPagamento:hover {
+  background-color: #fd8c30d5;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+#botaoMesas {
+  width: 100%;
+}
+
+.navbar button {
+  font-size: 20px;
+}
+
+.categoria ul li button {
+  margin-top: 5px;
+  width: 90%;
+  background-color: transparent;
+  border: 1px solid black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.categorias {
+  height: 89%;
+  overflow: auto;
+}
+
+.item {
+  margin-top: 5px;
+  width: 80%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.containerTitulo h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.categoria {
+
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.categoria.active {
+  height: 100%;
+  display: block;
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .lista {
+    height: 80%;
+    height: 30vh;
+    overflow: auto;
+  }
+
+  .containerHome {
+    grid-template-areas:
+      "links"
+      "produtos"
+      "compras"
+
+
+    ;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+  }
+
+  .containerListaCompra {
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .containerPagamento {
+    height: auto;
+  }
+
+
+
+  .containerTitulo h1 {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 29px;
+}
+  header .logo {
+    display: none;
+  }
+  header ul li:nth-child(1){
+    display: none;
+  }
+  header ul li:nth-child(2){
+    display: none;
+  }
+  header ul li:nth-child(3){
+    display: none;
+  }
+ 
+
+
+  .navbar button {
+    font-size: 14px;
+  }
+
+  .categoria ul li button {
+    font-size: 14px;
+  }
+
+  .item {
+    width: 92%;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  #total {
+    font-size: 17px;
+  }
+
+  .botaoMesaVermelho {
+    font-size: 14px;
+  }
+
+
+  .botaoMesaNormal {
+    font-size: 14px;
+  }
+
+  .botaoPagamento {
+    width: 171px;
+    height: 33px;
+    font-size: 12px;
+  }
+
+  /*mesas*/
+
+  .categoria.active {
+    height: 50%;
+  }
+
+  .categorias {
+    height: 167%;
+  }
+
+  .containerProdutos {
+    height: 37vh;
+  }
+
+  .dropdown .dropbtn {
+    padding: 0;
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #000000;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  text-decoration: none;
+  color: black;
+  display: grid;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #5e615fde;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  width: 100%;
+  display: block;
+}

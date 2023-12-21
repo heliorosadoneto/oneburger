@@ -8,6 +8,7 @@ $router = new Router();
 
 $router->get('/', 'HomeController@index');
 $router->post('/salvar', 'HomeController@add');
+$router->post('/salvarMesas', 'HomeController@salvarMesas');
 
 // rota de pagina de vendas
 

@@ -17,6 +17,7 @@
 
 <body>
     <?php $render('header'); ?>
+    <div class="containerV">
     <form class="conteinerData" action="<?= $base ?>/read" method="get">
         <label for="dataInicio">Início</label>
         <input type="date" req name="dataInicio" id="dataInicio">
@@ -32,6 +33,7 @@
         </select>
         <input type="submit" value="Buscar">
     </form>
+    </div>
     <div class="container_vendas">
 
         <table id="minhaTabela" width="100%">

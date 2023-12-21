@@ -3,7 +3,6 @@
 namespace src\controllers;
 
 use \core\Controller;
-use DateTimeImmutable;
 use src\models\Produto;
 use src\models\Venda;
 
@@ -37,7 +36,9 @@ class HomeController extends Controller
         $venda = new Venda;
         $inputJSON = file_get_contents('php://input');
         $data = json_decode($inputJSON, true);
-        
+
+
+
         if (isset($data)) {
 
             foreach ($data as $valor) {
@@ -54,7 +55,11 @@ class HomeController extends Controller
                 ])->execute();
             }
         }
-        
     }
-    
+
+    public function salvarMesas(){
+        $inputJSON = file_get_contents('php://input');
+        $data = json_decode($inputJSON, true);
+        $_SESSION['dados'] = $data;
+    }
 }
