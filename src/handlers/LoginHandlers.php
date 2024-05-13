@@ -28,8 +28,7 @@ class LoginHandlers
             foreach ($user as $users) {
                 session_start();
                 $_SESSION['id'] = $users['id'];
-                $_SESSION['cargo'] = $users['cargo'];
-                $_SESSION['nome'] = $users['nome'];
+                $_SESSION['usuario'] = $users['cargo'];
 
 
                 $urlHttp = self::getUrlHttp();

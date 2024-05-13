@@ -8,9 +8,9 @@
     </div>
     <nav>
         <ul>
-            <?php if (isset($_SESSION['cargo']) && $_SESSION['cargo'] === 'gerente') { ?>
+            <?php if (isset($_SESSION['usuario']) && $_SESSION['usuario'] === 'gerente') { ?>
                 <li><a href="<?= $base; ?>/">Home</a></li>
-                <li><a href="<?= $base; ?>/vendas">Vendas</a></li>
+                <li><a href="<?= $base; ?>/vendas">Relatório de venda</a></li>
                 <li><a href="<?= $base; ?>/contaspagar">Contas á pagar</a></li>
             <?php } ?>
             <li><a href="<?= $base; ?>/sair">Sair</a></li>

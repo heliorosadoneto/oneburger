@@ -23,7 +23,7 @@ class HomeController extends Controller
     public function index()
     {
         $produto = Produto::select()->get();
-
+        
         $this->render('home', [
             'produtos' => $produto
         ]);
@@ -51,7 +51,8 @@ class HomeController extends Controller
                     'data' => date('Y-m-d'),
                     'hora' => date('H:i:s'),
                     'tipo_venda' => $valor['tipo_venda'],
-                    'tipo' => $valor['tipo']
+                    'tipo' => $valor['tipo'],
+                    'usuario' => $_SESSION['usuario']
                 ])->execute();
             }
         }

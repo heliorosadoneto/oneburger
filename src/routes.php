@@ -26,7 +26,11 @@ $router->get('/contaspagar/{id}/edit', 'ContasPagarController@edit');
 
 $router->get('/mesa/{id}/index', 'ProdutoMesaController@index');
 
-//
+//////
+$router->get('/cadastroDeUser', 'CadastroDeUserController@index');
+
+
+//////////
 
 $router->get('/login', 'LoginController@singnin');
 $router->get('/sair', 'LoginController@sair');

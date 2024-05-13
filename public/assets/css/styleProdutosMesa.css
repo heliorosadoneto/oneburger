@@ -20,6 +20,9 @@ body {
 }
 
 .dropdown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: black;
   grid-area: links;
   overflow: auto;
@@ -35,6 +38,7 @@ body {
 /* codigo relacionado ao botão de mesas */
 
 .botaoMesaVermelho {
+  width: 100%;
   border: 1.2px solid black;
   text-transform: uppercase;
   font-size: 20px;
@@ -44,6 +48,7 @@ body {
 }
 
 .botaoMesaNormal {
+  width: 100%;
   border: 1.2px solid black;
   text-transform: uppercase;
   font-size: 20px;
@@ -201,25 +206,30 @@ body {
     font-size: 12px;
     text-transform: uppercase;
   }
+
   header {
     display: flex;
     justify-content: end;
     align-items: center;
     height: 29px;
-}
+  }
+
   header .logo {
     display: none;
   }
-  header ul li:nth-child(1){
+
+  header ul li:nth-child(1) {
     display: none;
   }
-  header ul li:nth-child(2){
+
+  header ul li:nth-child(2) {
     display: none;
   }
-  header ul li:nth-child(3){
+
+  header ul li:nth-child(3) {
     display: none;
   }
- 
+
 
 
   .navbar button {
@@ -270,67 +280,5 @@ body {
     height: 37vh;
   }
 
-  .dropdown .dropbtn {
-    padding: 0;
-    font-size: 12px;
-  }
 
-}
-
-
-
-
-
-
-
-
-
-/* Dropdown Button */
-.dropbtn {
-  width: 100%;
-  background-color: transparent;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #000000;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  text-decoration: none;
-  color: black;
-  display: grid;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #5e615fde;
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  width: 100%;
-  display: block;
 }

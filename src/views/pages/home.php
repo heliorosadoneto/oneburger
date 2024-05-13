@@ -19,6 +19,7 @@
 
 <body>
   <?php
+
   $categoriasItens = array(
     "Burgers" => array(
       array("nome" => "ONE BURGER", "valor" => 28.50),
@@ -80,11 +81,12 @@
   );
   ?>
   <?php $render('header');
+
   ?>
   <div class="grid containerHome">
     <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">MESAS - <?php echo isset($_SESSION['mesa']['id']) ? $_SESSION['mesa']['id'] : ($_SESSION['mesa']['id'] = 1); ?> </button>
-      <div id="myDropdown" class="dropdown-content">
+      <button>MESAS - <?php echo isset($_SESSION['mesa']['id']) ? $_SESSION['mesa']['id'] : ($_SESSION['mesa']['id'] = 1); ?> </button>
+      <div>
         <?php
         for ($i = 1; $i <= 10; $i++) {
 
@@ -155,23 +157,6 @@
 
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
 
     ///////////////////////
 
@@ -193,7 +178,7 @@
       }
 
       // Verifica a cada 5 segundos se há itens salvos na lista de compras de cada mesa
-      setInterval(verificarItensSalvos, 2000); // 2000 milissegundos = 2 segundos
+      setInterval(verificarItensSalvos, 1000); // 2000 milissegundos = 2 segundos
       verificarItensSalvos(); // Chama a função pela primeira vez para iniciar a verificação imediatamente
     });
 
@@ -202,6 +187,7 @@
     var total = 0;
 
     function adicionarItem(nome, valor) {
+
 
       var itemExistente = listaCompras.find(item => item.nome === nome);
 

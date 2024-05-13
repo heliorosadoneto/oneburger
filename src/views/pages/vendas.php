@@ -18,7 +18,7 @@
 <body>
     <?php $render('header'); ?>
     <div class="containerV">
-    <form class="conteinerData" action="<?= $base ?>/read" method="get">
+    <form class="conteinerData" action="<?= $base ?>/vendas" method="get">
         <label for="dataInicio">Início</label>
         <input type="date" req name="dataInicio" id="dataInicio">
         <label for="dataFinal">Final</label>
@@ -44,6 +44,7 @@
                 <th>Data</th>
                 <th>Horas</th>
                 <th>Tipo de Venda</th>
+                <th>Usuario</th>
             </tr>
             <?php
             if (isset($stores) && !empty($stores)) :
@@ -66,6 +67,9 @@
                         </td>
                         <td>
                             <?= $store['tipo_venda'] ?>
+                        </td>
+                        <td>
+                            <?= $store['usuario'] ?>
                         </td>
                     </tr>
             <?php
