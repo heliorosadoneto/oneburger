@@ -3,7 +3,6 @@
 namespace src\controllers;
 
 use \core\Controller;
-use src\models\Produto;
 use src\models\Venda;
 
 
@@ -20,13 +19,9 @@ class HomeController extends Controller
         }
     }
 
-    public function index()
-    {
-        $produto = Produto::select()->get();
+    public function index(){
         
-        $this->render('home', [
-            'produtos' => $produto
-        ]);
+        $this->render('home');
     }
 
 
